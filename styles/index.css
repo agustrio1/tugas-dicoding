@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -14,7 +17,6 @@ body {
 header {
   position: fixed;
   display: flex;
-  /* min-width: 1200px; */
   width: 100%;
   margin-inline: auto;
   align-items: center;
@@ -70,7 +72,7 @@ header {
   top: 0;
   right: -250px;
   width: 250px;
-  height: 40%;
+  height: 55%;
   background-color: orangered;
   transition: right 0.3s ease-in-out;
 }
@@ -89,28 +91,32 @@ main {
 }
 
 #content {
-  width: 70%;
+  width: 100%;
   margin-right: 1.5rem;
 }
 
 /* Service Section */
 #service {
-  color: black;
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
 
+#service h1 {
+  margin:0 auto 2rem;
+}
+
 /* Description Section */
 .description {
   max-width: 1000px;
   width: 100%;
-  margin: 8rem auto;
+  margin: 4rem auto;
   text-align: center;
   padding: 20px;
-  color: black;
-  background-color: wheat;
+  color: #333;
+  background-color: whitesmoke;
   flex: 1 1;
 }
 
@@ -129,27 +135,28 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 20px;
+  align-items: center;
 }
-
-
 
 section {
   max-width: 1200px;
   flex: 1;
   margin: 10px;
   padding: 2opx;
-  background-color: wheat;
+  background-color: whitesmoke;
   text-align: center;
-  max-width: 400px;
+  width: 100%;
   flex: 1;
-  max-width: calc(33.33% - 20px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
 }
 
+section:hover {
+  transition: ease-in;
+}
 section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  padding: .2rem;
+  margin:1.2rem auto;
 }
 
 section img {
@@ -157,19 +164,21 @@ section img {
   height: auto;
 }
 
+section p {
+  padding: .4rem;
+}
+
 /* About Section */
 #about {
   display: flex;
   flex: 1;
   top: 0;
-  margin-top: -18rem;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
   background-color: #fff;
   color: black;
   text-align: center;
-  max-width: 30%;
 }
 
 #about h2 {
@@ -198,9 +207,7 @@ section img {
   .content {
     flex-direction: column;
   }
-  section {
-    max-width: 100%;
-  }
+
 }
 
 @media (min-width: 600px) {
@@ -244,17 +251,28 @@ section img {
 }
 
 @media (min-width: 769px) {
-  
+  #content {
+    width: 70%;
+  }
   #service {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: self-start;
+  }
+
+  #service h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
   section {
     flex: 1;
+    max-width: 400px;
+    max-width: calc(33.33% - 20px);
   }
 
   #about {
     margin-left: 20px;
+    margin-top: -18rem;
+    max-width: 30%;
   }
 }
