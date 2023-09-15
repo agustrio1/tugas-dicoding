@@ -224,6 +224,8 @@ section p {
   text-align: center;
   transition: transform 0.5s ease;
   width: 33.33%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  margin: 0 .5rem;
 }
 
 .carousel img {
@@ -234,6 +236,7 @@ section p {
 
 .carousel p {
   margin-top: 1rem;
+  font-size: 1rem;
 }
 
 /* Animasi untuk carousel */
@@ -271,6 +274,19 @@ section p {
 
   .content {
     flex-direction: column;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+  }
+
+  .carousel-slide {
+    width: 90%; 
+  }
+
+  .carousel img {
+    width: auto;
+    max-height: 200px;
   }
 }
 
