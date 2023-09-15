@@ -82,7 +82,7 @@ header {
 }
 
 main {
-  max-width: 1200px;
+  
   margin-inline: auto;
   padding: 4rem 2rem 4rem;
   flex: 1;
@@ -105,7 +105,7 @@ main {
 }
 
 #service h1 {
-  margin:0 auto 2rem;
+  margin:1rem auto 2rem;
 }
 
 /* Description Section */
@@ -147,6 +147,7 @@ section {
   text-align: center;
   width: 100%;
   flex: 1;
+  border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
 }
 
@@ -162,10 +163,12 @@ section h2 {
 section img {
   max-width: 100%;
   height: auto;
+  background-color: #fff;
 }
 
 section p {
-  padding: .4rem;
+  padding: 0 .1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* About Section */
@@ -212,7 +215,7 @@ section p {
 
 @media (min-width: 600px) {
   section {
-    flex: 1 1;
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
@@ -251,9 +254,6 @@ section p {
 }
 
 @media (min-width: 769px) {
-  #content {
-    width: 70%;
-  }
   #service {
     flex-direction: column;
     align-items: self-start;
@@ -265,14 +265,38 @@ section p {
   }
 
   section {
+    height: 550px;
+  }
+
+  
+}
+
+@media (min-width: 900px) {
+  #content {
+    width: 70%;
+  }
+
+  section {
     flex: 1;
-    max-width: 400px;
     max-width: calc(33.33% - 20px);
   }
 
   #about {
     margin-left: 20px;
-    margin-top: -18rem;
+    margin-top: -28rem;
     max-width: 30%;
   }
+
+  #about img {
+    margin: auto;
+  }
+  #about h2 {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+ #about p {
+  font-size: 1rem;
+  text-align: justify;
+ }
 }
