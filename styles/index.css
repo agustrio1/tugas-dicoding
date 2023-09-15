@@ -25,6 +25,7 @@ header {
   padding: 1rem 0;
   padding-block: 1rem;
   box-shadow: 0 0px 3px gray;
+  z-index: 99;
 }
 
 .title {
@@ -189,12 +190,73 @@ section p {
   margin-bottom: 10px;
 }
 
-#about img {
+#about .about-image {
+  display: flex;
   max-width: 100%;
   height: auto;
 }
 
+/* Review */
+#reviews {
+  margin: 4rem 0;
+  text-align: center;
+  color: #000;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.carousel-wrapper {
+  display: flex;
+  animation: carousel-animation 15s linear infinite;
+  overflow: hidden;
+  width: 300%;
+
+}
+
+.carousel-slide {
+  flex: 0 0 33.33%;
+  padding: 0 1rem;
+  text-align: center;
+  transition: transform 0.5s ease;
+  width: 33.33%;
+}
+
+.carousel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel p {
+  margin-top: 1rem;
+}
+
+/* Animasi untuk carousel */
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
 /* Responsive Design */
+
+@media (max-width: 480px) {
+  .carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .description h1 {
     font-size: 24px;
@@ -216,7 +278,7 @@ section p {
   section {
     flex: 1 1 calc(50% - 20px);
   }
-  
+
   #about img {
     width: 400px;
     margin: auto;
@@ -254,6 +316,10 @@ section p {
 
   .off-canvas.open {
     right: 0;
+  }
+
+  .carousel-slide {
+    flex: 0 0 50%;
   }
 }
 
@@ -296,7 +362,7 @@ section p {
 
   #about {
     margin-left: 20px;
-    margin-top: -28rem;
+   margin-top: -65rem;
     max-width: 30%;
   }
 
